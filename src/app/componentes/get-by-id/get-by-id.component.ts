@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Campers } from 'src/app/interfaces/campers.interface';
+import { campers } from 'src/app/interfaces/campers.interface';
 import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class GetByIdComponent implements OnInit {
 
-  vans: Campers | undefined 
+  vans: campers | undefined 
   vansId!: number;
   private servicio = inject(ServiceService)
   private route = inject(ActivatedRoute)
@@ -22,7 +22,7 @@ export class GetByIdComponent implements OnInit {
   }
 
   details(id: number): void {
-    this.servicio.getById(id).subscribe((data:Campers) => {
+    this.servicio.getById(id).subscribe((data:campers) => {
       this.vans = data;
     })
 
