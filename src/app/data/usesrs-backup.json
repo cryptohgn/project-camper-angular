@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "username": "Pablo_1",
+      "password": "123",
+      "imguser": ""
+    },
+    {
+      "id": 2,
+      "username": "Maria_2",
+      "password": "345",
+      "imguser": ""
+    },
+    {
+      "id": 1,
+      "username": "Jose_3",
+      "password": "777",
+      "imguser": ""
+    },
+    {
+      "id": 1,
+      "username": "Nico_4",
+      "password": "789",
+      "imguser": ""
+    },
+    {
+      "id": 1,
+      "username": "David_5",
+      "password": "900",
+      "imguser": ""
+    },
+    {
+      "id": 1,
+      "username": "Pedro_6",
+      "password": "999",
+      "imguser": ""
+    }
+  ]

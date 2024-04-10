@@ -1,0 +1,1055 @@
+[
+    {
+      "id": 1,
+      "title": "Volkswagen California",
+      "brand": "Volkswagen",
+      "price": 25000,
+      "km": 80000,
+      "year": 2018,
+      "img": "https://example.com/volkswagen_california.jpg",
+      "model": "California",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix",
+          "Foam Board"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 150,
+      "change": "Automatic",
+      "description": "2018 Volkswagen California camper van. Diesel engine with automatic transmission. Comfortable interior with sleeping accommodations for 4 people. Fully equipped with solar panels and insulation. Equipped with a back camera and Android Auto. Located in Berlin, Germany.",
+      "location": {
+        "latitude": 52.52,
+        "longitude": 13.405,
+        "city": "Berlin",
+        "region": "Berlin",
+        "country": "Germany"
+      },
+      "user": "pablo_1"
+    },
+    {
+      "id": 2,
+      "title": "Mercedes-Benz Sprinter",
+      "brand": "Mercedes-Benz",
+      "price": 30000,
+      "km": 70000,
+      "year": 2017,
+      "img": "https://example.com/mercedes_sprinter.jpg",
+      "model": "Sprinter",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix",
+          "Spray Foam"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 5,
+      "kw": 180,
+      "change": "Automatic",
+      "description": "2017 Mercedes-Benz Sprinter camper van. Diesel engine with automatic transmission. Spacious interior with room for 2 people. Features solar panels and insulation. Equipped with a back camera and Android Auto. Located in Munich, Germany.",
+      "location": {
+        "latitude": 48.1351,
+        "longitude": 11.582,
+        "city": "Munich",
+        "region": "Bavaria",
+        "country": "Germany"
+      },
+      "user": "maria_2"
+    },
+    {
+      "id": 3,
+      "title": "Ford Transit Custom",
+      "brand": "Ford",
+      "price": 20000,
+      "km": 90000,
+      "year": 2016,
+      "img": "https://example.com/ford_transit_custom.jpg",
+      "model": "Transit Custom",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix",
+          "Foam Board"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 130,
+      "change": "Manual",
+      "description": "2016 Ford Transit Custom camper van. Diesel engine with manual transmission. Cozy interior with seating for 3 people. Equipped with insulation and a back camera. Located in London, United Kingdom.",
+      "location": {
+        "latitude": 51.5074,
+        "longitude": -0.1278,
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom"
+      },
+      "user": "john_3"
+    },
+    {
+      "id": 4,
+      "title": "Fiat Ducato",
+      "brand": "Fiat",
+      "price": 18000,
+      "km": 100000,
+      "year": 2015,
+      "img": "https://example.com/fiat_ducato.jpg",
+      "model": "Ducato",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": false,
+      "androidIOAuto": false,
+      "doors": 3,
+      "kw": 110,
+      "change": "Manual",
+      "description": "2015 Fiat Ducato camper van. Diesel engine with manual transmission. Suitable for 2 people. Includes insulation. Located in Rome, Italy.",
+      "location": {
+        "latitude": 41.9028,
+        "longitude": 12.4964,
+        "city": "Rome",
+        "region": "Lazio",
+        "country": "Italy"
+      },
+      "user": "laura_4"
+    },
+    {
+      "id": 5,
+      "title": "Peugeot Boxer",
+      "brand": "Peugeot",
+      "price": 22000,
+      "km": 85000,
+      "year": 2019,
+      "img": "https://example.com/peugeot_boxer.jpg",
+      "model": "Boxer",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 120,
+      "change": "Manual",
+      "description": "2019 Peugeot Boxer camper van. Diesel engine with manual transmission. Suitable for 2 people. Equipped with insulation and a lifted roof. Located in Paris, France.",
+      "location": {
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "city": "Paris",
+        "region": "Île-de-France",
+        "country": "France"
+      },
+      "user": "carlos_5"
+    },
+    {
+      "id": 6,
+      "title": "Renault Trafic",
+      "brand": "Renault",
+      "price": 19000,
+      "km": 95000,
+      "year": 2017,
+      "img": "https://example.com/renault_trafic.jpg",
+      "model": "Trafic",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 130,
+      "change": "Manual",
+      "description": "2017 Renault Trafic camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation, solar panels, and a back camera. Located in Barcelona, Spain.",
+      "location": {
+        "latitude": 41.3851,
+        "longitude": 2.1734,
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain"
+      },
+      "user": "ana_6"
+    },
+    {
+      "id": 7,
+      "title": "Nissan NV200",
+      "brand": "Nissan",
+      "price": 17000,
+      "km": 105000,
+      "year": 2016,
+      "img": "https://example.com/nissan_nv200.jpg",
+      "model": "NV200",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": false,
+      "androidIOAuto": false,
+      "doors": 3,
+      "kw": 100,
+      "change": "Manual",
+      "description": "2016 Nissan NV200 camper van. Diesel engine with manual transmission. Suitable for 2 people. Equipped with insulation. Located in Amsterdam, Netherlands.",
+      "location": {
+        "latitude": 52.3676,
+        "longitude": 4.9041,
+        "city": "Amsterdam",
+        "region": "North Holland",
+        "country": "Netherlands"
+      },
+      "user": "martin_7"
+    },
+    {
+      "id": 8,
+      "title": "Citroën Jumper",
+      "brand": "Citroën",
+      "price": 21000,
+      "km": 90000,
+      "year": 2018,
+      "img": "https://example.com/citroen_jumper.jpg",
+      "model": "Jumper",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 5,
+      "kw": 160,
+      "change": "Automatic",
+      "description": "2018 Citroën Jumper camper van. Diesel engine with automatic transmission. Comfortable interior with seating for 4 people. Equipped with insulation, solar panels, and a back camera. Located in Lyon, France.",
+      "location": {
+        "latitude": 45.764,
+        "longitude": 4.8357,
+        "city": "Lyon",
+        "region": "Auvergne-Rhône-Alpes",
+        "country": "France"
+      },
+      "user": "sophie_8"
+    },
+    {
+      "id": 9,
+      "title": "Toyota Proace",
+      "brand": "Toyota",
+      "price": 27000,
+      "km": 75000,
+      "year": 2020,
+      "img": "https://example.com/toyota_proace.jpg",
+      "model": "Proace",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 170,
+      "change": "Automatic",
+      "description": "2020 Toyota Proace camper van. Diesel engine with automatic transmission. Suitable for 2 people. Equipped with insulation, solar panels, and a back camera. Located in Madrid, Spain.",
+      "location": {
+        "latitude": 40.4168,
+        "longitude": -3.7038,
+        "city": "Madrid",
+        "region": "Community of Madrid",
+        "country": "Spain"
+      },
+      "user": "juan_9"
+    },
+    {
+      "id": 10,
+      "title": "Opel Movano",
+      "brand": "Opel",
+      "price": 24000,
+      "km": 80000,
+      "year": 2019,
+      "img": "https://example.com/opel_movano.jpg",
+      "model": "Movano",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 160,
+      "change": "Manual",
+      "description": "2019 Opel Movano camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation, solar panels, and a back camera. Located in Frankfurt, Germany.",
+      "location": {
+        "latitude": 50.1109,
+        "longitude": 8.6821,
+        "city": "Frankfurt",
+        "region": "Hesse",
+        "country": "Germany"
+      },
+      "user": "lisa_10"
+    },
+    {
+      "id": 11,
+      "title": "Iveco Daily",
+      "brand": "Iveco",
+      "price": 26000,
+      "km": 85000,
+      "year": 2017,
+      "img": "https://example.com/iveco_daily.jpg",
+      "model": "Daily",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": false,
+      "androidIOAuto": false,
+      "doors": 3,
+      "kw": 150,
+      "change": "Manual",
+      "description": "2017 Iveco Daily camper van. Diesel engine with manual transmission. Suitable for 2 people. Equipped with insulation, solar panels, and a lifted roof. Located in Milan, Italy.",
+      "location": {
+        "latitude": 45.4642,
+        "longitude": 9.19,
+        "city": "Milan",
+        "region": "Lombardy",
+        "country": "Italy"
+      },
+      "user": "marco_11"
+    },
+    {
+      "id": 12,
+      "title": "Hyundai H350",
+      "brand": "Hyundai",
+      "price": 23000,
+      "km": 95000,
+      "year": 2018,
+      "img": "https://example.com/hyundai_h350.jpg",
+      "model": "H350",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2018 Hyundai H350 camper van. Diesel engine with manual transmission. Comfortable interior with seating for 4 people. Equipped with insulation, solar panels, and a back camera. Located in Valencia, Spain.",
+      "location": {
+        "latitude": 39.4699,
+        "longitude": -0.3763,
+        "city": "Valencia",
+        "region": "Valencian Community",
+        "country": "Spain"
+      },
+      "user": "luis_12"
+    },
+    {
+      "id": 13,
+      "title": "Vauxhall Movano",
+      "brand": "Vauxhall",
+      "price": 20000,
+      "km": 100000,
+      "year": 2016,
+      "img": "https://example.com/vauxhall_movano.jpg",
+      "model": "Movano",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": false,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 120,
+      "change": "Manual",
+      "description": "2016 Vauxhall Movano camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation and solar panels. Located in Edinburgh, United Kingdom.",
+      "location": {
+        "latitude": 55.9533,
+        "longitude": -3.1883,
+        "city": "Edinburgh",
+        "region": "Scotland",
+        "country": "United Kingdom"
+      },
+      "user": "hannah_13"
+    },
+    {
+      "id": 14,
+      "title": "Volkswagen Transporter",
+      "brand": "Volkswagen",
+      "price": 26000,
+      "km": 90000,
+      "year": 2018,
+      "img": "https://example.com/volkswagen_transporter.jpg",
+      "model": "Transporter",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 5,
+      "kw": 150,
+      "change": "Automatic",
+      "description": "2018 Volkswagen Transporter camper van. Diesel engine with automatic transmission. Comfortable interior with seating for 4 people. Equipped with insulation, solar panels, and a back camera. Located in Hamburg, Germany.",
+      "location": {
+        "latitude": 53.5511,
+        "longitude": 9.9937,
+        "city": "Hamburg",
+        "region": "Hamburg",
+        "country": "Germany"
+      },
+      "user": "sven_14"
+    },
+    {
+      "id": 15,
+      "title": "Ford Transit",
+      "brand": "Ford",
+      "price": 22000,
+      "km": 85000,
+      "year": 2019,
+      "img": "https://example.com/ford_transit.jpg",
+      "model": "Transit",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2019 Ford Transit camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation, solar panels, and a back camera. Located in Birmingham, United Kingdom.",
+      "location": {
+        "latitude": 52.4862,
+        "longitude": -1.8904,
+        "city": "Birmingham",
+        "region": "England",
+        "country": "United Kingdom"
+      },
+      "user": "emily_15"
+    },
+    {
+      "id": 16,
+      "title": "Mercedes-Benz Vito",
+      "brand": "Mercedes-Benz",
+      "price": 28000,
+      "km": 75000,
+      "year": 2020,
+      "img": "https://example.com/mercedes_vito.jpg",
+      "model": "Vito",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 160,
+      "change": "Automatic",
+      "description": "2020 Mercedes-Benz Vito camper van. Diesel engine with automatic transmission. Suitable for 2 people. Equipped with insulation, solar panels, and a back camera. Located in Stockholm, Sweden.",
+      "location": {
+        "latitude": 59.3293,
+        "longitude": 18.0686,
+        "city": "Stockholm",
+        "region": "Stockholm County",
+        "country": "Sweden"
+      },
+      "user": "anna_16"
+    },
+    {
+      "id": 17,
+      "title": "Fiat Talento",
+      "brand": "Fiat",
+      "price": 21000,
+      "km": 90000,
+      "year": 2018,
+      "img": "https://example.com/fiat_talento.jpg",
+      "model": "Talento",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 5,
+      "kw": 130,
+      "change": "Manual",
+      "description": "2018 Fiat Talento camper van. Diesel engine with manual transmission. Comfortable interior with seating for 4 people. Equipped with insulation and a lifted roof. Located in Lisbon, Portugal.",
+      "location": {
+        "latitude": 38.7223,
+        "longitude": -9.1393,
+        "city": "Lisbon",
+        "region": "Lisbon",
+        "country": "Portugal"
+      },
+      "user": "pedro_17"
+    },
+    {
+      "id": 18,
+      "title": "Peugeot Expert",
+      "brand": "Peugeot",
+      "price": 23000,
+      "km": 85000,
+      "year": 2019,
+      "img": "https://example.com/peugeot_expert.jpg",
+      "model": "Expert",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2019 Peugeot Expert camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation, solar panels, and a back camera. Located in Marseille, France.",
+      "location": {
+        "latitude": 43.2965,
+        "longitude": 5.3698,
+        "city": "Marseille",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "country": "France"
+      },
+      "user": "lucie_18"
+    },
+    {
+      "id": 19,
+      "title": "Renault Master",
+      "brand": "Renault",
+      "price": 24000,
+      "km": 80000,
+      "year": 2020,
+      "img": "https://example.com/renault_master.jpg",
+      "model": "Master",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 5,
+      "kw": 160,
+      "change": "Automatic",
+      "description": "2020 Renault Master camper van. Diesel engine with automatic transmission. Comfortable interior with seating for 4 people. Equipped with insulation, solar panels, and a back camera. Located in Nice, France.",
+      "location": {
+        "latitude": 43.7102,
+        "longitude": 7.262,
+        "city": "Nice",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "country": "France"
+      },
+      "user": "olivier_19"
+    },
+    {
+      "id": 20,
+      "title": "Citroën Relay",
+      "brand": "Citroën",
+      "price": 21000,
+      "km": 85000,
+      "year": 2018,
+      "img": "https://example.com/citroen_relay.jpg",
+      "model": "Relay",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": false,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 130,
+      "change": "Manual",
+      "description": "2018 Citroën Relay camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation. Located in Brussels, Belgium.",
+      "location": {
+        "latitude": 50.8503,
+        "longitude": 4.3517,
+        "city": "Brussels",
+        "region": "Brussels",
+        "country": "Belgium"
+      },
+      "user": "thomas_20"
+    },
+    {
+      "id": 21,
+      "title": "Nissan NV300",
+      "brand": "Nissan",
+      "price": 22000,
+      "km": 90000,
+      "year": 2019,
+      "img": "https://example.com/nissan_nv300.jpg",
+      "model": "NV300",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2019 Nissan NV300 camper van. Diesel engine with manual transmission. Suitable for 2 people. Equipped with insulation, solar panels, and a back camera. Located in Vienna, Austria.",
+      "location": {
+        "latitude": 48.2082,
+        "longitude": 16.3738,
+        "city": "Vienna",
+        "region": "Vienna",
+        "country": "Austria"
+      },
+      "user": "anna_21"
+    },
+    {
+      "id": 22,
+      "title": "Toyota Hiace",
+      "brand": "Toyota",
+      "price": 25000,
+      "km": 85000,
+      "year": 2018,
+      "img": "https://example.com/toyota_hiace.jpg",
+      "model": "Hiace",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 150,
+      "change": "Automatic",
+      "description": "2018 Toyota Hiace camper van. Diesel engine with automatic transmission. Comfortable interior with seating for 3 people. Equipped with insulation, solar panels, and a back camera. Located in Zurich, Switzerland.",
+      "location": {
+        "latitude": 47.3769,
+        "longitude": 8.5417,
+        "city": "Zurich",
+        "region": "Zurich",
+        "country": "Switzerland"
+      },
+      "user": "lisa_22"
+    },
+    {
+      "id": 23,
+      "title": "Opel Vivaro",
+      "brand": "Opel",
+      "price": 23000,
+      "km": 90000,
+      "year": 2019,
+      "img": "https://example.com/opel_vivaro.jpg",
+      "model": "Vivaro",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2019 Opel Vivaro camper van. Diesel engine with manual transmission. Suitable for 2 people. Equipped with insulation, solar panels, and a back camera. Located in Geneva, Switzerland.",
+      "location": {
+        "latitude": 46.2044,
+        "longitude": 6.1432,
+        "city": "Geneva",
+        "region": "Geneva",
+        "country": "Switzerland"
+      },
+      "user": "michael_23"
+    },
+    {
+      "id": 24,
+      "title": "Hyundai i800",
+      "brand": "Hyundai",
+      "price": 22000,
+      "km": 95000,
+      "year": 2017,
+      "img": "https://example.com/hyundai_i800.jpg",
+      "model": "i800",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": false,
+      "androidIOAuto": false,
+      "doors": 5,
+      "kw": 120,
+      "change": "Manual",
+      "description": "2017 Hyundai i800 camper van. Diesel engine with manual transmission. Comfortable interior with seating for 4 people. Equipped with insulation. Located in Stockholm, Sweden.",
+      "location": {
+        "latitude": 59.3293,
+        "longitude": 18.0686,
+        "city": "Stockholm",
+        "region": "Stockholm County",
+        "country": "Sweden"
+      },
+      "user": "maria_24"
+    },
+    {
+      "id": 25,
+      "title": "Citroën SpaceTourer",
+      "brand": "Citroën",
+      "price": 24000,
+      "km": 90000,
+      "year": 2019,
+      "img": "https://example.com/citroen_spacetourer.jpg",
+      "model": "SpaceTourer",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 130,
+      "change": "Manual",
+      "description": "2019 Citroën SpaceTourer camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation and a back camera. Located in Copenhagen, Denmark.",
+      "location": {
+        "latitude": 55.6761,
+        "longitude": 12.5683,
+        "city": "Copenhagen",
+        "region": "Capital Region of Denmark",
+        "country": "Denmark"
+      },
+      "user": "lars_25"
+    },
+    {
+      "id": 26,
+      "title": "Ford Custom",
+      "brand": "Ford",
+      "price": 25000,
+      "km": 85000,
+      "year": 2018,
+      "img": "https://example.com/ford_custom.jpg",
+      "model": "Custom",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2018 Ford Custom camper van. Diesel engine with manual transmission. Comfortable interior with seating for 4 people. Equipped with insulation and a back camera. Located in Oslo, Norway.",
+      "location": {
+        "latitude": 59.9139,
+        "longitude": 10.7522,
+        "city": "Oslo",
+        "region": "Oslo",
+        "country": "Norway"
+      },
+      "user": "marius_26"
+    },
+    {
+      "id": 27,
+      "title": "Volkswagen Crafter",
+      "brand": "Volkswagen",
+      "price": 27000,
+      "km": 80000,
+      "year": 2020,
+      "img": "https://example.com/volkswagen_crafter.jpg",
+      "model": "Crafter",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 5,
+      "kw": 170,
+      "change": "Automatic",
+      "description": "2020 Volkswagen Crafter camper van. Diesel engine with automatic transmission. Comfortable interior with seating for 3 people. Equipped with insulation, solar panels, and a back camera. Located in Helsinki, Finland.",
+      "location": {
+        "latitude": 60.1695,
+        "longitude": 24.9354,
+        "city": "Helsinki",
+        "region": "Uusimaa",
+        "country": "Finland"
+      },
+      "user": "antti_27"
+    },
+    {
+      "id": 28,
+      "title": "Mercedes-Benz Sprinter",
+      "brand": "Mercedes-Benz",
+      "price": 29000,
+      "km": 75000,
+      "year": 2021,
+      "img": "https://example.com/mercedes_sprinter.jpg",
+      "model": "Sprinter",
+      "seats": 2,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": true,
+      "backCam": true,
+      "androidIOAuto": true,
+      "doors": 5,
+      "kw": 180,
+      "change": "Automatic",
+      "description": "2021 Mercedes-Benz Sprinter camper van. Diesel engine with automatic transmission. Comfortable interior with seating for 2 people. Equipped with insulation, solar panels, and a back camera. Located in Reykjavik, Iceland.",
+      "location": {
+        "latitude": 64.1265,
+        "longitude": -21.8174,
+        "city": "Reykjavik",
+        "region": "Capital Region",
+        "country": "Iceland"
+      },
+      "user": "bjorn_28"
+    },
+    {
+      "id": 29,
+      "title": "Ford Tourneo",
+      "brand": "Ford",
+      "price": 23000,
+      "km": 85000,
+      "year": 2020,
+      "img": "https://example.com/ford_tourneo.jpg",
+      "model": "Tourneo",
+      "seats": 3,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": false,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 4,
+      "kw": 140,
+      "change": "Manual",
+      "description": "2020 Ford Tourneo camper van. Diesel engine with manual transmission. Comfortable interior with seating for 3 people. Equipped with insulation and a back camera. Located in Dublin, Ireland.",
+      "location": {
+        "latitude": 53.3498,
+        "longitude": -6.2603,
+        "city": "Dublin",
+        "region": "Leinster",
+        "country": "Ireland"
+      },
+      "user": "sean_29"
+    },
+    {
+      "id": 30,
+      "title": "Peugeot Boxer",
+      "brand": "Peugeot",
+      "price": 21000,
+      "km": 90000,
+      "year": 2018,
+      "img": "https://example.com/peugeot_boxer.jpg",
+      "model": "Boxer",
+      "seats": 4,
+      "fuel": "Diesel",
+      "isolation": {
+        "isolation": true,
+        "isolationMaterial": [
+          "Thinsulate",
+          "Reflectix"
+        ]
+      },
+      "solarpanel": true,
+      "liftedRoof": false,
+      "backCam": true,
+      "androidIOAuto": false,
+      "doors": 5,
+      "kw": 150,
+      "change": "Manual",
+      "description": "2018 Peugeot Boxer camper van. Diesel engine with manual transmission. Comfortable interior with seating for 4 people. Equipped with insulation, solar panels, and a back camera. Located in Warsaw, Poland.",
+      "location": {
+        "latitude": 52.2297,
+        "longitude": 21.0122,
+        "city": "Warsaw",
+        "region": "Masovian Voivodeship",
+        "country": "Poland"
+      },
+      "user": "marta_30"
+    }
+  ]

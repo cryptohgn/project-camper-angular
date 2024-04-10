@@ -1,4 +1,4 @@
-export interface campers {
+export interface Camper {
     id: number;
     title: string;
     brand: string;
