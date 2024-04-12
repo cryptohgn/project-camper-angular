@@ -15,6 +15,7 @@ import { CamperVanViewComponent } from './componentes/camper-van-view/camper-van
 import { AddCampervanComponent } from './componentes/add-campervan/add-campervan.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
+import { FilterformComponent } from './componentes/filterform/filterform.component';
 import { ErrorComponent } from './componentes/error/error.component';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ErrorComponent } from './componentes/error/error.component';
     CamperVanViewComponent,
     AddCampervanComponent,
     FooterComponent,
+    FilterformComponent,
     ErrorComponent
   ],
   imports: [
@@ -36,7 +38,8 @@ import { ErrorComponent } from './componentes/error/error.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterOutlet
+    RouterOutlet, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
