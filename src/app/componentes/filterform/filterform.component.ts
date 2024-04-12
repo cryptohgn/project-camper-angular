@@ -17,11 +17,13 @@ filterForm: FormGroup;
 constructor() {
   this.filterForm = new FormGroup({
    brand: new FormControl(),
+   priceMin: new FormControl(),
 
   });
 }
 
 applyFilter(){
+  // allVansfilter((van)=>van.brand === this.filterForm.value.brand && &&)
   console.log(this.filterForm.value);
 }
   
