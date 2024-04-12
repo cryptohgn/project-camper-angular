@@ -15,6 +15,7 @@ export class LoginComponent  {
   formulario: FormGroup
   mensajeError: string | null = null;
   allUsers: any;
+  error!: string; 
 
 
   constructor(
@@ -37,7 +38,9 @@ export class LoginComponent  {
         console.log(login)
         if (login){
           localStorage.setItem('clave',JSON.stringify(login))
-        } 
+        } else {
+          this.error = "Error"
+        }
       })
         }
       } 

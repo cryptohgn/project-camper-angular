@@ -30,8 +30,8 @@
       <button type="submit" [disabled]="formulario.invalid" [ngClass]="{'button-enabled': formulario.valid}">
           Enviar
       </button>
-      <div *ngIf="mensajeError" class="send">
-          {{ mensajeError }}
+      <div *ngIf="error" class="send">
+          {{ error }}
       </div>
   </form>
 </section>
