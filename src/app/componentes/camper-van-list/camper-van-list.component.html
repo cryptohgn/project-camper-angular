@@ -1,1 +1,12 @@
-<p>camper-van-list works!</p>
+<app-filterform></app-filterform>
+<div class="van-list-container">
+    <div class="van-col" *ngFor="let van of allVans">
+        <div class="van-card">
+            <img src="{{van.img}}" alt="{{van.title}}">
+            <h2>{{van.title}}</h2>
+            <h3>{{van.price}}€</h3> | {{van.model}}
+            <p>{{van.location.city}}</p>
+            <p>{{van.fuel}}</p>
+        </div>
+    </div>
+</div>

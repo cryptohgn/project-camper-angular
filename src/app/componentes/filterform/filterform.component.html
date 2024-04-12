@@ -1,0 +1,81 @@
+<div class="filterForm">
+    <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
+                <div>
+                    <label for="brand">Choose a Brand:</label>
+                        <select name="brand" id="brand" formControlName="brand">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Opel">Opel</option>
+                            <option value="Iveco">Iveco</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Vauxhall">Vauxhall</option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Bürstner">Bürstner</option>
+                            <option value="Laika">Laika</option>
+                            <option value="FurgoKaravaning">FurgoKaravaning</option>
+                            <option value="Dreamer">Dreamer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div *ngIf="filterForm.get('brand')?.value === 'Other'">
+                            <input type="text" formControlName="Other" placeholder="Specify Brand">
+                        </div>
+                        <label for="model">Choose Model:</label>
+                            <select name="model" id="model" formControlName="model">
+                                <option value="">--Please choose an option--</option>
+                                <option value="Westfalia">Westfalia</option>
+                                <option value="California">California</option>
+                                <option value="Nugget">Nugget</option>
+                                <option value="Vito">Vito</option>
+                                <option value="Transit">Transit</option>
+                                <option value="Marco Polo">Marco Polo</option>
+                                <option value="Daily">Daily</option>
+                                <option value="Berlingo">Berlingo</option>
+                                <option value="Caddy">Caddy</option>
+                                <option value="h1">Caddy</option>
+                                <option value="4*4">4*4</option>
+                                <option value="Master">Master</option>
+                                <option value="T3">T3</option>
+                                <option value="T4">T4</option>
+                                <option value="T5">T5</option>
+                                <option value="Multivan">Multivan</option>
+                                <option value="NV200">NV200</option>
+                                <option value="NV200">NV300</option>
+                                <option value="Jumper">Jumper</option>
+                                <option value="Boxer">Boxer</option>
+                                <option value="Vivaro">Vivaro</option>
+                                <option value="Ducato">Vivaro</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div *ngIf="filterForm.get('model')?.value === 'Other'">
+                                <input type="text" formControlName="Other" placeholder="Specify Model">
+                            </div>
+                          </div>
+                <div>
+                    <label for="price">Price:</label>
+                        <span>Min Price:</span><input type="range" id="price" formControlName="priceMin" min="0" max="100000" step="5000">
+                        <span>{{ filterForm.get('priceMin')?.value }}</span>
+                        <span>Max Price:</span><input type="range" id="price" formControlName="priceMax" min="0" max="1000000" step="5000">
+                        <span>{{ filterForm.get('priceMax')?.value }}</span>
+                </div>
+                <div>
+                    <label for="km">Km:</label>
+                        <input type="range" id="km" formControlName="kmMin" min="0" max="100000" step="5000">
+                        <span>{{ filterForm.get('kmMin')?.value }}</span>
+                        <input type="range" id="km" formControlName="kmMax" min="0" max="1000000" step="5000">
+                        <span>{{ filterForm.get('kmMin')?.value }}</span>
+                </div>
+                <div>
+                    <label for="years">Km:</label>
+                        <input type="range" id="years" formControlName="yearsMin" min="1970" max={{currentYear-1}} step="5">
+                        <span>{{ filterForm.get('yearsMin')?.value }}</span>
+                        <input type="range" id="years" formControlName="yearsMax" min="0" max="1000000" step="5000">
+                        <span>{{ filterForm.get('yearsMax')?.value }}</span>
+                </div>
+                <button type="submit">Apply Filter</button>
+    </form>
