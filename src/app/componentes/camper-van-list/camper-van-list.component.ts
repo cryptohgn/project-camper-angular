@@ -10,13 +10,19 @@ import { Camper } from 'src/app/interfaces/campers.interface';
 export class CamperVanListComponent {
 
 allVans: Camper[] = []; 
+error!: string;
 
 vansService = inject(ServiceVans)
 
 async ngOnInit(){
-  const response = await this.vansService.getAllVans();
-  this.allVans = response
-  console.log(this.allVans)
+  try{
+    const response = await this.vansService.getAllVans();
+    this.allVans = response
+    console.log(this.allVans)
+  } catch (error){
+    this.error = "Error 404"
+  
   }
+}
 
 }
