@@ -1,6 +1,5 @@
-<app-filterform></app-filterform>
 <div class="van-list-container">
-    <div class="van-col" *ngFor="let van of allVans">
+    <div class="van-col" *ngFor="let van of filteredVans">
         <div class="van-card">
             <img src="{{van.img}}" alt="{{van.title}}">
             <h2>{{van.title}}</h2>
