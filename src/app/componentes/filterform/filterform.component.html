@@ -1,3 +1,8 @@
+<div class="form-search">
+    <input name="buscar"[(ngModel)]="formSearch" placeholder="Search for you Camper Van">
+    <button (click)="searchVan()">Buscar</button>
+</div>
+
 <div class="filterForm">
     <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
                 <div>
@@ -30,6 +35,7 @@
                                 <option value="">--Please choose an option--</option>
                                 <option value="Westfalia">Westfalia</option>
                                 <option value="California">California</option>
+                                <option value="Sprinter">Sprinter</option>
                                 <option value="Nugget">Nugget</option>
                                 <option value="Vito">Vito</option>
                                 <option value="Transit">Transit</option>
@@ -37,7 +43,7 @@
                                 <option value="Daily">Daily</option>
                                 <option value="Berlingo">Berlingo</option>
                                 <option value="Caddy">Caddy</option>
-                                <option value="h1">Caddy</option>
+                                <option value="h1">Ducato</option>
                                 <option value="4*4">4*4</option>
                                 <option value="Master">Master</option>
                                 <option value="T3">T3</option>
@@ -58,23 +64,23 @@
                           </div>
                 <div>
                     <label for="price">Price: </label>
-                        <span>Min Price:</span><input type="range" id="price" formControlName="priceMin" min="0" max="100000" step="5000">
+                        <span>Min Price:</span><input type="range" id="price" formControlName="priceMin" min="0" max="20000" step="5000">
                         <span>{{ filterForm.get('priceMin')?.value }}</span>
-                        <span>Max Price:</span><input type="range" id="price" formControlName="priceMax" min="0" max="1000000" step="5000">
+                        <span>Max Price:</span><input type="range" id="price" formControlName="priceMax" min="0" max="100000" step="5000">
                         <span>{{ filterForm.get('priceMax')?.value }}</span>
                 </div>
                 <div>
                     <label for="km">Km:</label>
-                        <input type="range" id="km" formControlName="kmMin" min="0" max="1000000" step="50000">
+                        <input type="range" id="km" formControlName="kmMin" min="0" max="50000" step="10000">
                         <span>{{ filterForm.get('kmMin')?.value }}</span>
-                        <input type="range" id="km" formControlName="kmMax" min="0" max="1000000" step="50000">
+                        <input type="range" id="km" formControlName="kmMax" min="30000" max="1000000" step="50000">
                         <span>{{ filterForm.get('kmMax')?.value }}</span>
                 </div>
                 <div>
                     <label for="years">Years:</label>
-                        <input type="range" id="years" formControlName="yearsMin" min="1970" max={{currentYear-1}} step="1">
+                        <input type="range" id="years" formControlName="yearsMin" min="1970" max={{currentYear}} step="1">
                         <span>{{ filterForm.get('yearsMin')?.value }}</span>
-                        <input type="range" id="years" formControlName="yearsMax" min="1971" max={{currentYear-1}} step="1">
+                        <input type="range" id="years" formControlName="yearsMax" min="1980" max={{currentYear}} step="1">
                         <span>{{ filterForm.get('yearsMax')?.value }}</span>
                 </div>
                 <div>

@@ -12,6 +12,8 @@ import { ServiceVans } from 'src/app/services/serviceVans.service';
 })
 export class FilterformComponent {
 
+  formSearch: string = '';
+
   allVans: Camper[] = [];
   vansService = inject(ServiceVans)
   
@@ -20,6 +22,12 @@ export class FilterformComponent {
     this.allVans = response;
     }
 
+    async searchVan() {
+   
+      this.allVans = this.allVans.filter((van) =>
+        van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
+      );
+    }
 
 currentDate = new Date()
 currentYear = this.currentDate.getFullYear();
@@ -33,11 +41,11 @@ constructor() {
    model: new FormControl(''),
    othermodel: new FormControl(''),
    priceMin:new FormControl(0),
-   priceMax: new FormControl(1000000),
+   priceMax: new FormControl(100000),
    kmMin: new FormControl(0),
    kmMax: new FormControl(1000000),
    yearsMin: new FormControl(1970),
-   yearsMax: new FormControl(new Date().getFullYear() - 1),
+   yearsMax: new FormControl(new Date().getFullYear()),
    kwMin: new FormControl(20),
    kwMax: new FormControl(600),
    diesel: new FormControl(false),
@@ -71,39 +79,39 @@ applyFilter = () => {
     if ( selectedBrand && item.brand !== selectedBrand){
       passesFilter = false;
     }
-    //  // Model filter
-    //  const selectedModel = this.filterForm.get('model')?.value;
-    //  if (selectedModel && item.model !== selectedModel) {
-    //    passesFilter = false;
-    //  }
-    //  // Price filter
-    // const minPrice = this.filterForm.get('priceMin')?.value;
-    // const maxPrice = this.filterForm.get('priceMax')?.value;
-    // if (minPrice !== null && maxPrice !== null && (item.price < minPrice || item.price > maxPrice)) {
-    //   passesFilter = false;
-    // }
-    //  // Km filter
-    //  const minKm = this.filterForm.get('kmMin')?.value;
-    //  const maxKm = this.filterForm.get('kmMax')?.value;
-    //  if (minKm !== null && maxKm !== null && (item.km < minKm || item.km > maxKm)) {
-    //    passesFilter = false;
-    //  }
+     // Model filter
+     const selectedModel = this.filterForm.get('model')?.value;
+     if (selectedModel && item.model !== selectedModel) {
+       passesFilter = false;
+     }
+     // Price filter
+    const minPrice = this.filterForm.get('priceMin')?.value;
+    const maxPrice = this.filterForm.get('priceMax')?.value;
+    if (minPrice !== null && maxPrice !== null && (item.price < minPrice || item.price > maxPrice)) {
+      passesFilter = false;
+    }
+     // Km filter
+     const minKm = this.filterForm.get('kmMin')?.value;
+     const maxKm = this.filterForm.get('kmMax')?.value;
+     if (minKm !== null && maxKm !== null && (item.km < minKm || item.km > maxKm)) {
+       passesFilter = false;
+     }
  
-    //  // Years filter
-    //  const minYear = this.filterForm.get('yearsMin')?.value;
-    //  const maxYear = this.filterForm.get('yearsMax')?.value;
-    //  if (minYear !== null && maxYear !== null && (item.year < minYear || item.year > maxYear)) {
-    //    passesFilter = false;
-    //  }
+     // Years filter
+     const minYear = this.filterForm.get('yearsMin')?.value;
+     const maxYear = this.filterForm.get('yearsMax')?.value;
+     if (minYear !== null && maxYear !== null && (item.year < minYear || item.year > maxYear)) {
+       passesFilter = false;
+     }
  
-    //  // Fuel filter
-    //  const diesel = this.filterForm.get('diesel')?.value;
-    //  const gasoline = this.filterForm.get('gasoline')?.value;
-    //  const gas = this.filterForm.get('gas')?.value;
-    //  const electric = this.filterForm.get('electric')?.value;
-    //  if (!(diesel || gasoline || gas || electric)) {
-    //    passesFilter = false;
-    //  }
+     // Fuel filter
+     const diesel = this.filterForm.get('diesel')?.value;
+     const gasoline = this.filterForm.get('gasoline')?.value;
+     const gas = this.filterForm.get('gas')?.value;
+     const electric = this.filterForm.get('electric')?.value;
+     if (!(diesel || gasoline || gas || electric)) {
+       passesFilter = false;
+     }
  
     //  // Doors filter
     //  const selectedDoors = this.filterForm.get('doors')?.value;
