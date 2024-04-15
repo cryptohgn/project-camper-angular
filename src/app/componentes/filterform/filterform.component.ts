@@ -15,6 +15,7 @@ export class FilterformComponent {
   formSearch: string = '';
 
   allVans: Camper[] = [];
+  filterdedVans:Camper[] = [];
   vansService = inject(ServiceVans)
   
   async ngOnInit(){
@@ -22,13 +23,17 @@ export class FilterformComponent {
     this.allVans = response;
     }
 
-    async searchVan() {
-   
-      this.allVans = this.allVans.filter((van) =>
-        van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
-      );
+    searchVan() {
+      console.log(this.formSearch)
+      this.filterdedVans = this.allVans.filter((van) =>
+        van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()) ||
+        van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
+      )
+      // .filter((van)=>van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()))
+      console.log(this.filterdedVans)
     }
 
+  
 currentDate = new Date()
 currentYear = this.currentDate.getFullYear();
  
@@ -70,73 +75,67 @@ constructor() {
 }
 
 applyFilter = () => {
-
+  
   let filterVans = this.allVans.filter(item =>  {
-    let passesFilter = true;
+    
+    // Isolation filter
+    const isolation = this.filterForm.get('isolation')?.value;
+    if (isolation) {
+    //  console.log(this.filterForm.get('thinsulate')?.value) === item.isolation.isolationMaterial
+      this.filterForm.get('reflectix')?.value 
+      this.filterForm.get('foamoard')?.value 
+      this.filterForm.get('kayflex')?.value 
+      this.filterForm.get('other_isolation')?.value
+      
+    }
+    console.log(item.isolation)
 
     // Brand filter:
-    const selectedBrand = this.filterForm.get('brand')?.value;
-    if ( selectedBrand && item.brand !== selectedBrand){
-      passesFilter = false;
-    }
+    return (this.filterForm.get('brand')?.value === item.brand 
+    &&
      // Model filter
-     const selectedModel = this.filterForm.get('model')?.value;
-     if (selectedModel && item.model !== selectedModel) {
-       passesFilter = false;
-     }
-     // Price filter
-    const minPrice = this.filterForm.get('priceMin')?.value;
-    const maxPrice = this.filterForm.get('priceMax')?.value;
-    if (minPrice !== null && maxPrice !== null && (item.price < minPrice || item.price > maxPrice)) {
-      passesFilter = false;
-    }
-     // Km filter
-     const minKm = this.filterForm.get('kmMin')?.value;
-     const maxKm = this.filterForm.get('kmMax')?.value;
-     if (minKm !== null && maxKm !== null && (item.km < minKm || item.km > maxKm)) {
-       passesFilter = false;
-     }
+     this.filterForm.get('model')?.value === item.model )
+     &&
+     //Price filter
+    (this.filterForm.get('priceMin')?.value) <= item.price &&
+    (this.filterForm.get('priceMax')?.value) >= item.price
+   
+    //  // Km filter
+    //  const minKm = this.filterForm.get('kmMin')?.value;
+    //  const maxKm = this.filterForm.get('kmMax')?.value;
+    //  if (minKm !== null && maxKm !== null && (item.km < minKm || item.km > maxKm)) {
+    //    
+    //  }
  
-     // Years filter
-     const minYear = this.filterForm.get('yearsMin')?.value;
-     const maxYear = this.filterForm.get('yearsMax')?.value;
-     if (minYear !== null && maxYear !== null && (item.year < minYear || item.year > maxYear)) {
-       passesFilter = false;
-     }
+    //  // Years filter
+    //  const minYear = this.filterForm.get('yearsMin')?.value;
+    //  const maxYear = this.filterForm.get('yearsMax')?.value;
+    //  if (minYear !== null && maxYear !== null && (item.year < minYear || item.year > maxYear)) {
+    //    
+    //  }
  
-     // Fuel filter
-     const diesel = this.filterForm.get('diesel')?.value;
-     const gasoline = this.filterForm.get('gasoline')?.value;
-     const gas = this.filterForm.get('gas')?.value;
-     const electric = this.filterForm.get('electric')?.value;
-     if (!(diesel || gasoline || gas || electric)) {
-       passesFilter = false;
-     }
+    //  // Fuel filter
+    //  const diesel = this.filterForm.get('diesel')?.value;
+    //  const gasoline = this.filterForm.get('gasoline')?.value;
+    //  const gas = this.filterForm.get('gas')?.value;
+    //  const electric = this.filterForm.get('electric')?.value;
+    //  if (!(diesel || gasoline || gas || electric)) {
+    //    
+    //  }
  
     //  // Doors filter
     //  const selectedDoors = this.filterForm.get('doors')?.value;
     //  if (selectedDoors !== null && item.doors !== selectedDoors) {
-    //    passesFilter = false;
+    //    
     //  }
  
     //  // kw filter
     //  const selectedPower = this.filterForm.get('kw')?.value;
     //  if (selectedPower !== null && item.kw !== selectedPower) {
-    //    passesFilter = false;
+    //    
     //  }
  
-    //  // Isolation filter
-    //  const isolation = this.filterForm.get('isolation')?.value;
-    //  if (isolation) {
-    //    const thinsulate = this.filterForm.get('thinsulate')?.value;
-    //    const reflectix = this.filterForm.get('reflectix')?.value;
-    //    const foamoard = this.filterForm.get('foamoard')?.value;
-    //    const kayflex = this.filterForm.get('kayflex')?.value;
-    //    const otherIsolation = this.filterForm.get('other_isolation')?.value;
-    //    if (!(thinsulate || reflectix || foamoard || kayflex || otherIsolation)) {
-    //      passesFilter = false;
-    //    }
-    //  }
+     
  
     //  // Special features filter
     //  const solarpanel = this.filterForm.get('solarpanel')?.value;
@@ -144,17 +143,16 @@ applyFilter = () => {
     //  const backCam = this.filterForm.get('backCam')?.value;
     //  const androidIOAuto = this.filterForm.get('androidIOAuto')?.value;
     //  if (!(solarpanel || liftedRoof || backCam || androidIOAuto)) {
-    //    passesFilter = false;
+    //    
     //  }
  
     //  // Transmission filter
     //  const manual = this.filterForm.get('manual')?.value;
     //  const automatic = this.filterForm.get('automatic')?.value;
     //  if (!(manual || automatic)) {
-    //    passesFilter = false;
+    //    
     //  }
  
-     return passesFilter;
 
    });
    

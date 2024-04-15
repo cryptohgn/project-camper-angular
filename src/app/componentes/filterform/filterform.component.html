@@ -1,6 +1,6 @@
 <div class="form-search">
     <input name="buscar"[(ngModel)]="formSearch" placeholder="Search for you Camper Van">
-    <button (click)="searchVan()">Buscar</button>
+    <button (click)="searchVan()">Search</button>
 </div>
 
 <div class="filterForm">
@@ -64,9 +64,9 @@
                           </div>
                 <div>
                     <label for="price">Price: </label>
-                        <span>Min Price:</span><input type="range" id="price" formControlName="priceMin" min="0" max="20000" step="5000">
+                        <span>Min Price:</span><input type="range" id="price" formControlName="priceMin" min="0" max="20000" step="1000">
                         <span>{{ filterForm.get('priceMin')?.value }}</span>
-                        <span>Max Price:</span><input type="range" id="price" formControlName="priceMax" min="0" max="100000" step="5000">
+                        <span>Max Price:</span><input type="range" id="price" formControlName="priceMax" min="0" max="100000" step="1000">
                         <span>{{ filterForm.get('priceMax')?.value }}</span>
                 </div>
                 <div>
@@ -182,4 +182,4 @@
                 </div>
                 <button type="submit">Apply Filter</button>
     </form>
-    <app-camper-van-list [filteredVans]="allVans"></app-camper-van-list>
+        <app-camper-van-list [filteredVans]="allVans"></app-camper-van-list>
