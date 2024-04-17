@@ -77,11 +77,11 @@
                         <span>{{ filterForm.get('kmMax')?.value }}</span>
                 </div>
                 <div>
-                    <label for="years">Years:</label>
-                        <input type="range" id="years" formControlName="yearsMin" min="1970" max={{currentYear}} step="1">
-                        <span>{{ filterForm.get('yearsMin')?.value }}</span>
-                        <input type="range" id="years" formControlName="yearsMax" min="1980" max={{currentYear}} step="1">
-                        <span>{{ filterForm.get('yearsMax')?.value }}</span>
+                    <label for="year">year:</label>
+                        <input type="range" id="year" formControlName="yearMin" min="1970" max={{currentYear}} step="1">
+                        <span>{{ filterForm.get('yearMin')?.value }}</span>
+                        <input type="range" id="year" formControlName="yearMax" min="1980" max={{currentYear}} step="1">
+                        <span>{{ filterForm.get('yearMax')?.value }}</span>
                 </div>
                 <div>
                     <label for="kw">Kw:</label>

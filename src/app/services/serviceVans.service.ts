@@ -25,4 +25,10 @@ export class ServiceVans {
     return this.urlHttp.get<Camper>(ruta)
   } 
 
+  insertVan(newVan: Camper) :Promise<Camper>{
+    return firstValueFrom (
+      this.urlHttp.post<Camper>(this.urlApi, newVan)
+    )
+  }
+
 }

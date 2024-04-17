@@ -1,1 +1,119 @@
-<p>add-campervan works!</p>
+
+<div class="addVanForm">
+    <form [formGroup]="addVanForm" (ngSubmit)="addVan()">
+                <div>
+                    <label for="brand">Brand: </label>
+                        <input type="text" id="price" formControlName="price">
+                </div>
+                <div>
+                    <label for="model">Model: </label>
+                        <input type="text" id="model" formControlName="model">
+                </div>  
+                <div>
+                    <label for="price">Price: </label>
+                        <input type="text" id="price" formControlName="price">
+                </div>
+                <div>
+                    <label for="km">Km: </label>
+                        <input type="text" id="km" formControlName="km">
+                </div>
+                <div>
+                    <label for="year">Year: </label>
+                        <input type="text" id="year" formControlName="year">
+                </div>
+                <div>
+                    <label for="kw">Kw: </label>
+                        <input type="text" id="kw" formControlName="kw">
+                </div>
+                <div>
+                    Fuel: <label class="form-icon-checkbox">
+                        <input type="checkbox" id="diesel" formControlName="diesel">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                    </label> Diesel
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="gasoline" formControlName="gasoline">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                    </label> Gasoline
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="gas" formControlName="gas">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                    </label> Gas(Gnc)
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="electric" formControlName="electric">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                    </label> Electric
+                </div>
+                <div>
+                    <label for="doors">Doors: </label>
+                        <input type="text" id="doors" formControlName="doors">
+                </div>
+                
+                <div>
+                    Isolation: <label for="isolation">
+                        <input type="checkbox" id="isolation" formControlName="isolation">
+                    </label>
+                    <div *ngIf="addVanForm.get('isolation')?.value">
+                     <label>
+                        <input type="checkbox" id="thinsulate" formControlName="thinsulate">
+                        Thinsulate
+                    </label> 
+                    <label>
+                        <input type="checkbox" id="reflectix" formControlName="reflectix">
+                        Reflectix
+                    </label>
+                    <label>
+                        <input type="checkbox" id="foamoard" formControlName="foamoard">
+                        Foam Board
+                    </label>
+                    <label>
+                        <input type="checkbox" id="kayflex" formControlName="kayflex">
+                        KayFlex
+                    </label>
+                    <label>
+                        <input type="checkbox" id="other_isolation" formControlName="other_isolation">
+                        Other
+                    </label>
+                    </div>
+                </div>
+                <div>Special features:
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="solarpanel" formControlName="solarpanel">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                        Solarpanel
+                    </label>
+
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="liftedRoof" formControlName="liftedRoof">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                        liftedRoof
+                    </label>
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="backCam" formControlName="backCam">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                        Back Cam
+                    </label>
+                    <label class="form-icon-checkbox">
+                        <input type="checkbox" id="androidIOAuto" formControlName="androidIOAuto">
+                        <img src="../../../assets/img/icons/diesel-icon.svg">
+                        IO / Android Auto
+                    </label>
+                </div>
+                <div>
+                    <div>
+                        Change:
+                        <label class="form-icon-checkbox">
+                            <input type="checkbox" id="manual" formControlName="manual">
+                            <img src="../../../assets/img/icons/diesel-icon.svg">
+                            Manual
+                        </label>
+        
+                        <label class="form-icon-checkbox">
+                            <input type="checkbox" id="manual" formControlName="manual">
+                            <img src="../../../assets/img/icons/diesel-icon.svg">
+                            Automatic
+                        </label>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+    </form>
+    
