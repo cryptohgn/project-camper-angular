@@ -21,6 +21,7 @@ export class LoginComponent  {
   constructor(
     private fb: FormBuilder,
     private serviceUsers: ServiceUsers,
+    private router: Router
 
   ) {
     this.formulario = this.fb.group({
@@ -37,7 +38,8 @@ export class LoginComponent  {
         let login = this.allUsers.find((item:any)=>item.username === username && item.password === password)
         console.log(login)
         if (login){
-          localStorage.setItem('clave',JSON.stringify(login))
+          localStorage.setItem('clave',JSON.stringify(login));
+          this.router.navigate(['/user']);
         } else {
           this.error = "Error"
         }

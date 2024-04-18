@@ -6,15 +6,18 @@ import { AddCampervanComponent } from './componentes/add-campervan/add-campervan
 import { LoginComponent } from './componentes/login/login.component';
 import { CamperVanViewComponent } from './componentes/camper-van-view/camper-van-view.component';
 import { CamperVanListComponent } from './componentes/camper-van-list/camper-van-list.component';
+import { loginGuard } from './guards/login.guard';
+import { UserComponent } from './componentes/user/user.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: '', pathMatch: 'full', component: HomeComponent, canActivate: [loginGuard] },
   { path: 'adduser', component: AdduserComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'campervans', component: CamperVanListComponent },
-  {path: "product/:id", component: CamperVanViewComponent},
+  { path: 'allcampers', component: CamperVanListComponent, canActivate: [loginGuard] },
+  {path: "camperview/:id", component: CamperVanViewComponent},
   { path: 'addcampervan', component: AddCampervanComponent },
   { path: 'error', component: AddCampervanComponent },
+  { path: 'user', component: UserComponent }
 
 
 ];
