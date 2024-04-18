@@ -1,6 +1,6 @@
+import { Camper } from 'src/app/interfaces/campers.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject  } from '@angular/core';
-import { Camper } from '../interfaces/campers.interface';
 import { Observable, firstValueFrom } from 'rxjs';
 
 
@@ -26,9 +26,11 @@ export class ServiceVans {
   } 
 
   insertVan(newVan: Camper) :Promise<Camper>{
+    console.log(newVan)
     return firstValueFrom (
       this.urlHttp.post<Camper>(this.urlApi, newVan)
     )
+    
   }
 
 }

@@ -50,7 +50,7 @@ export class AddCampervanComponent {
      city: new FormControl("", []),
 
     });
-
+    console.log(this.addVanForm)
   }
     
     async ngOnInit(){
@@ -59,7 +59,7 @@ export class AddCampervanComponent {
       }
   
     async addVan() {
-       this.addVan = this.addVanForm.value;
-       let response = await this.vansService.insertVan(this.newVan)
+       this.newVan = this.addVanForm.value;
+       await this.vansService.insertVan(this.newVan)
       }
     }
