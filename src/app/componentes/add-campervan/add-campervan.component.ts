@@ -44,7 +44,11 @@ export class AddCampervanComponent {
      backCam: new FormControl(false),
      androidIOAuto: new FormControl(false),
      manual: new FormControl(false),
-     automatic: new FormControl(false)
+     automatic: new FormControl(false),
+     region: new FormControl("", []),
+     country: new FormControl("", []),
+     city: new FormControl("", []),
+
     });
 
   }
