@@ -1,7 +1,15 @@
-<ul>
-    <a [routerLink]="['/']"></a><li>Home</li>
-    <a [routerLink]="['/allcampers']"><li>See All Campers</li></a>
-    <a [routerLink]="['/addcampervan']"><li>Add new</li></a>
-    <a [routerLink]="['/adduser']"><li>Register</li></a>
-    <a [routerLink]="['/login']"><li>Login</li></a>
-</ul>
+<nav>
+  <ul>
+      <a [routerLink]="['/']"></a><li>Home</li>
+      <a [routerLink]="['/allcampers']"><li>See All Campers</li></a>
+      <a [routerLink]="['/addcampervan']"><li>Add new</li></a>
+
+  </ul>
+</nav>
+<nav>
+    <ul>
+        <li [routerLink]="['/login']">Login</li>
+        <li [routerLink]="['/adduser']">Register</li>
+        <li (click)="onClickLogout()">Logout</li>
+    </ul>
+</nav>

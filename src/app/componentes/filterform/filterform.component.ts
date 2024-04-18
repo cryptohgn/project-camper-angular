@@ -16,11 +16,19 @@ export class FilterformComponent {
   filteredVans: Camper[] = [];
   vansService = inject(ServiceVans);
 
+
   async ngOnInit() {
     const response = await this.vansService.getAllVans();
 
+constructor() {
+  this.filterForm = new FormGroup({
+   brand: new FormControl(),
+   priceMin: new FormControl(),
+
+
     // C.S. allVans se obtiene sólo una vez y no se modifica, para poder siempre filtrar de la lista completa
     this.allVans = response;
+
 
     // C.S. Lista filtrada que será modificado según parámetros de filtro
     this.filteredVans = this.allVans;
@@ -181,4 +189,10 @@ export class FilterformComponent {
     this.filteredVans = filterVans;
     console.log(this.filteredVans.length);
   };
+
+applyFilter(){
+  // allVansfilter((van)=>van.brand === this.filterForm.value.brand && &&)
+  console.log(this.filterForm.value);
+}
+
 }

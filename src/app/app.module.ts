@@ -16,6 +16,7 @@ import { AddCampervanComponent } from './componentes/add-campervan/add-campervan
 import { FooterComponent } from './componentes/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 import { FilterformComponent } from './componentes/filterform/filterform.component';
+import { ErrorComponent } from './componentes/error/error.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FilterformComponent } from './componentes/filterform/filterform.compone
     CamperVanViewComponent,
     AddCampervanComponent,
     FooterComponent,
-    FilterformComponent
+    FilterformComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

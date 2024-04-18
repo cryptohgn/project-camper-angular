@@ -1,7 +1,8 @@
 <div class="van-list-container">
     <div class="van-col" *ngFor="let van of filteredVans">
         <div class="van-card">
-            <a [routerLink]="['camperview/:id']"><img src="{{van.img}}" alt="{{van.title}}"></a>
+            <a routerLink="/camperview/{{van.id}}">
+            <img src="{{van.img}}" alt="{{van.title}}"></a>
             <h2>{{van.title}}</h2>
             <h3>{{van.price}}€</h3> | {{van.model}}
             <p>{{van.fuel}}</p>
