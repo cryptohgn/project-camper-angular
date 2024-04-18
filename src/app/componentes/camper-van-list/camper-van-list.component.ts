@@ -8,14 +8,17 @@ import { Camper } from 'src/app/interfaces/campers.interface';
   styleUrls: ['./camper-van-list.component.css']
 })
 
-export class CamperVanListComponent {
 
-allVans: Camper[] = []; 
-error!: string;
 
 export class CamperVanListComponent {
+
   @Input() filteredVans: Camper[] = [];
 
+  allVans: Camper[] = []; 
+  error!: string;
+  
+  vansService = inject(ServiceVans)
+  
 async ngOnInit(){
   try{
     const response = await this.vansService.getAllVans();
