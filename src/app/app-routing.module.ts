@@ -11,15 +11,15 @@ import { UserComponent } from './componentes/user/user.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent, canActivate: [loginGuard] },
+  { path: 'user', component: UserComponent },
   { path: 'adduser', component: AdduserComponent },
+  { path: 'allcampers', component: CamperVanListComponent },
+  { path: 'addcampervan', component: AddCampervanComponent },
+  { path: 'camperview/:id', component: CamperVanViewComponent },
   { path: 'login', component: LoginComponent },
   { path: 'allcampers', component: CamperVanListComponent, canActivate: [loginGuard] },
-  {path: "camperview/:id", component: CamperVanViewComponent},
   { path: 'addcampervan', component: AddCampervanComponent },
-  { path: 'error', component: AddCampervanComponent },
-  { path: 'user', component: UserComponent }
-
-
+  { path: 'error', component: AddCampervanComponent }
 ];
 
 @NgModule({
