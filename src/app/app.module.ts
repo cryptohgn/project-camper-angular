@@ -39,7 +39,7 @@ import { ErrorComponent } from './componentes/error/error.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterOutlet, 
-    FormsModule
+    FormsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

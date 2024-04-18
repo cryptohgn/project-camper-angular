@@ -33,8 +33,10 @@ export class FilterformComponent {
     searchVan() {
       console.log(this.formSearch)
       this.filteredVans = this.allVans.filter((van) =>
-        van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()) ||
-        van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
+        // van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
+       van.description.includes(this.formSearch)
+        // van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()) ||
+        // van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
       )
       // .filter((van)=>van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()))
       console.log(this.filteredVans)
@@ -94,7 +96,7 @@ applyFilter = () => {
     const modelFilter = !this.filterForm.get('model')!.value || this.filterForm.get('model')!.value === item.model;
     const priceFilter = item.price >= this.filterForm.get('priceMin')!.value  && item.price <= this.filterForm.get('priceMax')!.value;
     const kmFilter = item.km >= this.filterForm.get('kmMin')!.value && item.km <= this.filterForm.get('kmMax')!.value;
-    const yearFilter = item.year >= this.filterForm.get('yearsMin')!.value && item.year <= this.filterForm.get('yearsMax')!.value;
+    const yearFilter = item.year >= this.filterForm.get('yearMin')!.value && item.year <= this.filterForm.get('yearMax')!.value;
     const fuelFilter = (!this.filterForm.get('diesel')!.value && !this.filterForm.get('gasoline')!.value && !this.filterForm.get('gas')!.value && !this.filterForm.get('electric')!.value) 
     || this.filterForm.get(item.fuel.toLowerCase())!.value;
     const doorsFilter = !this.filterForm.get('doors')!.value || this.filterForm.get('doors')!.value === item.doors;

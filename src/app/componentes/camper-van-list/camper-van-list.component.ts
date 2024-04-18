@@ -15,6 +15,8 @@ export class CamperVanListComponent {
   @Input() filteredVans: Camper[] = [];
 
   allVans: Camper[] = []; 
+  favVans: Camper[] = [];
+  camperFav!: any;
   error!: string;
   
   vansService = inject(ServiceVans)
@@ -30,5 +32,18 @@ async ngOnInit(){
   }
 }
 
+addFav(id: any){
+  
+  console.log(id)
+  this.camperFav = this.allVans.find((van) =>
+  van.id == id);
+  this.favVans.push(this.camperFav)
+  console.log(this.favVans)
 
 }
+
+
+  
+}
+
+

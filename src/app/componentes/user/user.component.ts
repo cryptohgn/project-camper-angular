@@ -45,8 +45,6 @@ router = inject(Router)
   };
 
 
-  
-
   ngOnInit(): void {
 
     this.loadCurrentUser();
