@@ -16,22 +16,28 @@ export class FilterformComponent {
   formSearch: string = '';
 
   allVans: Camper[] = [];
-  filterdedVans:Camper[] = [];
+  filteredVans:Camper[] = [];
   vansService = inject(ServiceVans)
   
   async ngOnInit(){
     const response = await this.vansService.getAllVans();
+
+    // C.S. allVans se obtiene sólo una vez y no se modifica, para poder siempre filtrar de la lista completa
     this.allVans = response;
+    
+    // C.S. Lista filtrada que será modificado según parámetros de filtro
+    this.filteredVans = this.allVans;
+
     }
 
     searchVan() {
       console.log(this.formSearch)
-      this.filterdedVans = this.allVans.filter((van) =>
+      this.filteredVans = this.allVans.filter((van) =>
         van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()) ||
         van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
       )
       // .filter((van)=>van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()))
-      console.log(this.filterdedVans)
+      console.log(this.filteredVans)
     }
 
   
@@ -120,8 +126,8 @@ applyFilter = () => {
 
    });
    
-  this.filterdedVans = filterVans;
-   console.log(this.filterdedVans.length) 
+  this.filteredVans = filterVans;
+   console.log(this.filteredVans.length) 
   
   }
 

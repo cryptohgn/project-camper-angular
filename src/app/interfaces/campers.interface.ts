@@ -1,5 +1,5 @@
 export interface Camper {
-  id: number;
+  id: string;
   title: string;
   brand: string;
   price: number;
