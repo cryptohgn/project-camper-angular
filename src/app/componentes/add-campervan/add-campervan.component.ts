@@ -57,8 +57,13 @@ export class AddCampervanComponent {
       this.allVans = response;
       }
   
-    async addVan() {
+      addVan() {
        this.newVan = this.addVanForm.value;
-       await this.vansService.insertVan(this.newVan)
+       this.vansService.insertVan(this.newVan)
+      };
+       
+      
+    
+        
       }
-    }
+    

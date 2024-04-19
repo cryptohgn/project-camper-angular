@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { User } from 'src/app/interfaces/user.interface';
 import { ServiceUsers } from 'src/app/services/serviceUsers.services';
+import Swal from 'sweetalert2';
+
+
 
 @Component({
   selector: 'app-log-in',
@@ -16,6 +19,7 @@ export class LoginComponent  {
   mensajeError: string | null = null;
   allUsers: any;
   error!: string; 
+  
 
 
   constructor(
@@ -41,11 +45,19 @@ export class LoginComponent  {
           localStorage.setItem('clave',JSON.stringify(login));
           this.router.navigate(['/user']);
         } else {
-          this.error = "Error"
+          Swal.fire({
+            icon: "error",
+            title: "ERROR",
+            text: "¡Usuario o contraseña incorrecta!",
+            footer: '<a href="/login">Inténtalo de nuevo</a>'
+          });
+          
+        
         }
-      })
-        }
+        })
+      
+        
       } 
       
 
-  }
+  }}

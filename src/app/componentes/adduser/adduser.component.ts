@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { ServiceUsers } from 'src/app/services/serviceUsers.services';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-adduser',
@@ -16,7 +17,7 @@ export class AdduserComponent {
   formulario!: FormGroup;
 
 
-  
+
   constructor() {
     this.formulario = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -34,14 +35,28 @@ export class AdduserComponent {
         next: (response: User) => {
           console.log('Respuesta de la API:', response);
           this.router.navigate(['/home']);
-        },
-        error: (error: User) => {
-          console.error('Error al agregar usuario:', error);
- 
         }
-      });
-    }
+
+      }
+    )
   }
-
-
+  else {
+    Swal.fire({
+      title: "Do you want to save the changes?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: "Don't save"
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire("Saved!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Changes are not saved", "", "info");
+      }
+    });
+  }
 }
+}
+
+
