@@ -1,0 +1,16 @@
+.main {
+  width: 100;
+  height: fit-content;
+  display: flex;
+}
+.filters {
+  width: 40%;
+  padding: 20px;
+}
+
+.router {
+  margin: 20px 30px;
+  padding: 30px;
+  width: 50%;
+  height: fit-content;
+}
