@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { ServiceVans } from 'src/app/services/serviceVans.service';
 import { Camper } from 'src/app/interfaces/campers.interface';
 
+
 @Component({
   selector: 'app-camper-van-list',
   templateUrl: './camper-van-list.component.html',
@@ -14,6 +15,7 @@ export class CamperVanListComponent {
 
   @Input() filteredVans: Camper[] = [];
 
+
   allVans: Camper[] = []; 
   favVans: Camper[] = [];
   camperFav!: any;
@@ -25,7 +27,7 @@ async ngOnInit(){
   try{
     const response = await this.vansService.getAllVans();
     this.allVans = response
-    console.log(this.allVans)
+    // console.log(this.allVans)
   } catch (error){
     this.error = "Error 404"
   
@@ -37,12 +39,15 @@ addFav(id: any){
   console.log(id)
   this.camperFav = this.allVans.find((van) =>
   van.id == id);
-  this.favVans.push(this.camperFav)
-  console.log(this.favVans)
-
+  let camperFavinFavs = this.favVans.find((van) =>
+    van.id == this.camperFav.id);
+  console.log(camperFavinFavs)
+  if(!camperFavinFavs){
+    this.favVans.push(this.camperFav)
+    this.vansService.sendFavs(this.favVans)
+  }
+  
 }
-
-
   
 }
 
