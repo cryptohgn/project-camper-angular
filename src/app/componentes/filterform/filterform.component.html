@@ -3,8 +3,8 @@
     <button (click)="searchVan()">Search</button>
 </div>
 
-<div class="filterForm">
-    <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
+<div class="filterFormContainer">
+    <form [formGroup]="filterForm" (ngSubmit)="applyFilter()" class="filterForm">
                 <div>
                     <label for="brand">Choose a Brand:</label>
                         <select name="brand" id="brand" formControlName="brand">

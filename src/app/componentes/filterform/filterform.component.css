@@ -1,1 +1,9 @@
+.filterFormContainer {
+    display: flex;
+   
+  
+}
 
+.filterForm{
+    width: 70%;
+}
