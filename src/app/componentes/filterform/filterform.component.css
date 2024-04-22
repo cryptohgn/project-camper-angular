@@ -1,9 +1,95 @@
 .filterFormContainer {
-    display: flex;
-   
-  
+  display: flex;
 }
 
 .filterForm{
-    width: 70%;
+  width: 100%;
+  border-radius: 20px;
+  background-color:  #E1B246;
+}
+
+.filterForm {
+  display: block;
+  padding: 30px;
+  
+}
+.filtNum {
+  
+  font-weight: 300;
+  font-weight: bolder;
+}
+.form-search {
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.form-icon-checkbox img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.searchInput{
+  width: 100%;
+  height: 3em;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 1em;
+}
+.custom-select {
+  min-width: 350px;
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+
+
+.earchInput placeholder {
+  font-size: 2em;
+}
+
+.buttonFilter{
+background-color: #000;
+width:80%;
+border-radius: 10px;
+border: none;
+color: white;
+padding: 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin:  20px 0;
+cursor: pointer;
+}
+
+.buttonReset{ 
+  background-color: grey;
+  width:80%;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin:  20px 0;
+  cursor: pointer;
+}
+
+.allCampers{
+  margin: 2em 0;
 }

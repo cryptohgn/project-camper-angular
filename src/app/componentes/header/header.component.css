@@ -1,4 +1,28 @@
-*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    align-items: center;
+   }
+ 
+   .imagen{
+    width: 14rem;
+}
+
+ul {
+    display: flex;
+   gap: 20px;
+   color: black;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(251, 251, 229)
+    
+};
+
 div {
 
     width: 100%;

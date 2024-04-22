@@ -11,6 +11,7 @@ import { ServiceVans } from 'src/app/services/serviceVans.service';
   templateUrl: './filterform.component.html',
   styleUrls: ['./filterform.component.css']
 })
+
 export class FilterformComponent {
 
   formSearch: string = '';
@@ -18,13 +19,13 @@ export class FilterformComponent {
   allVans: Camper[] = [];
   filteredVans:Camper[] = [];
   vansService = inject(ServiceVans)
-  
+
   async ngOnInit(){
     const response = await this.vansService.getAllVans();
 
     // C.S. allVans se obtiene sólo una vez y no se modifica, para poder siempre filtrar de la lista completa
     this.allVans = response;
-    
+
     // C.S. Lista filtrada que será modificado según parámetros de filtro
     this.filteredVans = this.allVans;
 
@@ -33,8 +34,8 @@ export class FilterformComponent {
     searchVan() {
       console.log(this.formSearch)
       this.filteredVans = this.allVans.filter((van) =>
-        // van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
-       van.description.includes(this.formSearch)
+       van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()) 
+      //  van.description.includes(this.formSearch)
         // van.title.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase()) ||
         // van.description.toLocaleLowerCase().includes(this.formSearch.toLocaleLowerCase())
       )
@@ -42,10 +43,10 @@ export class FilterformComponent {
       console.log(this.filteredVans)
     }
 
-  
+
 currentDate = new Date()
 currentYear = this.currentDate.getFullYear();
- 
+
 filterForm: FormGroup;
 
 constructor() {
@@ -85,19 +86,17 @@ constructor() {
   });
 }
 
-
-
 applyFilter = () => {
-  
+
   let filterVans = this.allVans.filter(item =>  {
-    
+
     // C.S. Filtros individuales
     const brandFilter = !this.filterForm.get('brand')!.value || this.filterForm.get('brand')!.value === item.brand;
     const modelFilter = !this.filterForm.get('model')!.value || this.filterForm.get('model')!.value === item.model;
     const priceFilter = item.price >= this.filterForm.get('priceMin')!.value  && item.price <= this.filterForm.get('priceMax')!.value;
     const kmFilter = item.km >= this.filterForm.get('kmMin')!.value && item.km <= this.filterForm.get('kmMax')!.value;
     const yearFilter = item.year >= this.filterForm.get('yearMin')!.value && item.year <= this.filterForm.get('yearMax')!.value;
-    const fuelFilter = (!this.filterForm.get('diesel')!.value && !this.filterForm.get('gasoline')!.value && !this.filterForm.get('gas')!.value && !this.filterForm.get('electric')!.value) 
+    const fuelFilter = (!this.filterForm.get('diesel')!.value && !this.filterForm.get('gasoline')!.value && !this.filterForm.get('gas')!.value && !this.filterForm.get('electric')!.value)
     || this.filterForm.get(item.fuel.toLowerCase())!.value;
     const doorsFilter = !this.filterForm.get('doors')!.value || this.filterForm.get('doors')!.value === item.doors;
     const kwFilter = item.kw >= this.filterForm.get('kwMin')!.value && item.kw <= this.filterForm.get('kwMax')!.value;
@@ -118,23 +117,29 @@ applyFilter = () => {
     const foamBoardFilter = !this.filterForm.get('foamBoard')!.value || item.isolation.isolationMaterial.foamBoard;
     const kayflexFilter = !this.filterForm.get('kayflex')!.value || item.isolation.isolationMaterial.kayflex;
     const other_isolationFilter = !this.filterForm.get('other_isolation')!.value || item.isolation.isolationMaterial.other;
-    const isolationFilter = !this.filterForm.get('isolation')!.value 
+    const isolationFilter = !this.filterForm.get('isolation')!.value
       || (thinsulateFilter && reflectixFilter && foamBoardFilter && kayflexFilter && other_isolationFilter)
 
     // C.S. Combinación de todos los filtros
-    return brandFilter && modelFilter && priceFilter && kmFilter && yearFilter 
+    return brandFilter && modelFilter && priceFilter && kmFilter && yearFilter
       && fuelFilter && fuelFilter && doorsFilter && kwFilter && specialFeaturesFilter
       && changeFilter && isolationFilter;
 
    });
-   
+
   this.filteredVans = filterVans;
-   console.log(this.filteredVans.length) 
-  
-  }
 
   }
 
- 
+  async reset(){
+    const response = await this.vansService.getAllVans();
+    // C.S. allVans se obtiene sólo una vez y no se modifica, para poder siempre filtrar de la lista completa
+    this.filteredVans = response;
+  }
 
+  // sendFiltered(){
+  //   const filtered = this.filteredVans
+  //   this.vansService.getFiltered(filtered);
+  // }
+  }
 

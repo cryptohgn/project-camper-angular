@@ -1,18 +1,19 @@
-<div>
+<div class="header">
 
+    <img src="https://kondukon.com/icons-camper/logo-camper-van1.svg" alt="logo" class="imagen">
    
-        <ul>
-            <li [routerLink]="['']">Home</li>
-            <li [routerLink]="['/allcampers']"> See All Campers</li>
-            <li [routerLink]="['/addcampervan']">Add new</li>
+        <ul class="navVans">
+            <li class="lista" [routerLink]="['']">Home</li>
+            <li class="lista" [routerLink]="['/allcampers']"> See All Campers</li>
+            <li class="lista" [routerLink]="['/addcampervan']">Add new</li>
             
         </ul>
     
     
         <ul class="login">
-            <li [routerLink]="['/login']">Login</li>
-            <li [routerLink]="['/adduser']">Register</li>
-            <li (click)="onClickLogout()">Logout</li>
+            <li class="lista" [routerLink]="['/login']">Login</li>
+            <li class="lista" [routerLink]="['/adduser']">Register</li>
+            <li class="lista" (click)="onClickLogout()">Logout</li>
         </ul>
     
     
