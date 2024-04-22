@@ -2,27 +2,27 @@
 <div class="addVanForm">
     <form [formGroup]="addVanForm" (ngSubmit)="addVan()">
                 <div>
-                    <label for="brand">Brand: </label>
+                    <label for="brand"><p><strong>Brand:</strong></p>Brand: </label>
                         <input type="text" id="price" formControlName="price">
                 </div>
                 <div>
-                    <label for="model">Model: </label>
+                    <label for="model"><p><strong>Model:</strong></p> </label>
                         <input type="text" id="model" formControlName="model">
                 </div>  
                 <div>
-                    <label for="price">Price: </label>
+                    <label for="price"><p><strong>Price:</strong></p></label>
                         <input type="text" id="price" formControlName="price">
                 </div>
                 <div>
-                    <label for="km">Km: </label>
+                    <label for="km"><p><strong>Km:</strong></p></label>
                         <input type="text" id="km" formControlName="km">
                 </div>
                 <div>
-                    <label for="year">Year: </label>
+                    <label for="year"><p><strong>Year:</strong></p> </label>
                         <input type="text" id="year" formControlName="year">
                 </div>
                 <div>
-                    <label for="kw">Kw: </label>
+                    <label for="kw"><p><strong>Kw:</strong></p></label>
                         <input type="text" id="kw" formControlName="kw">
                 </div>
                 <div>
@@ -44,12 +44,12 @@
                     </label> Electric
                 </div>
                 <div>
-                    <label for="doors">Doors: </label>
+                    <label for="doors"><p><strong>Doors:</strong></p> </label>
                         <input type="text" id="doors" formControlName="doors">
                 </div>
                 
                 <div>
-                    Isolation: <label for="isolation">
+                    <p><strong>Isolation:</strong></p> <label for="isolation">
                         <input type="checkbox" id="isolation" formControlName="isolation">
                     </label>
                     <div *ngIf="addVanForm.get('isolation')?.value">
@@ -75,7 +75,7 @@
                     </label>
                     </div>
                 </div>
-                <div>Special features:
+                <div><p><strong>Special features:</strong></p>
                     <label class="form-icon-checkbox">
                         <input type="checkbox" id="solarpanel" formControlName="solarpanel">
                         <img src="../../../assets/img/icons/diesel-icon.svg">
@@ -100,7 +100,7 @@
                 </div>
                 <div>
                     <div>
-                        Change:
+                        <p><strong>Change:</strong></p>
                         <label class="form-icon-checkbox">
                             <input type="checkbox" id="manual" formControlName="manual">
                             <img src="../../../assets/img/icons/diesel-icon.svg">
@@ -126,6 +126,6 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit">Enviar</button>
+                <button class="buttonFilter" type="submit">Enviar</button>
     </form>
     
