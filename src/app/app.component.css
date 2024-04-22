@@ -1,0 +1,8 @@
+div {
+    width: 100%;
+    display: flex;
+}
+
+.camperVanList{
+    margin-left: 20px;
+}

@@ -1,0 +1,119 @@
+/* section {
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  };
+
+  @media screen and (max-width: 960px) {
+    section {
+      container: card/inline-size;
+    }};
+
+    figure {
+        margin: 0;
+        padding: 0;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+      };
+      
+
+      div img {
+        max-width: 100%;
+        transform-origin: center;
+        transform: scale(var(--img-scale));
+        transition: transform 0.4s ease-in-out;
+      };
+
+      div h2 {
+        margin: 0 0 18px 0;
+        font-family: "Bebas Neue", cursive;
+        font-size: 1.9rem;
+        letter-spacing: 0.06em;
+        color: var(--title-color);
+        transition: color 0.3s ease-out;
+      }
+
+      .article-body {
+        padding: 24px;
+      };
+
+      */
+
+
+
+      .card {
+        width: 80%;
+        height: 300px;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        justify-content: center;
+        align-items: center;
+       }
+       
+       .card-img {
+        background-color: #ffcaa6;
+        height: 70%;
+        width: 100%;
+        border-radius: .5rem;
+        transition: .3s ease;
+       };
+        img{
+        height: 40%;
+       }
+       
+       .card-info {
+        padding-top: 10%;
+       }
+       
+       svg {
+        width: 20px;
+        height: 20px;
+       }
+       
+       .card-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+       }
+       
+       /*Text*/
+       .text-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.5;
+       }
+       
+       .text-body {
+        font-size: .9em;
+        padding-bottom: 10px;
+       }
+       
+       /*Button*/
+       .card-button {
+        border: 1px solid #252525;
+        display: flex;
+        padding: .3em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .3s ease-in-out;
+       }
+       
+       /*Hover*/
+       .card-img:hover {
+        transform: translateY(-25%);
+        box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+       }
+       
+       .card-button:hover {
+        border: 1px solid #ffcaa6;
+        background-color: #ffcaa6;
+       }

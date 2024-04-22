@@ -1,4 +1,4 @@
-<div class="van-list-container">
+ <!-- <div class="van-list-container">
     <div class="van-col" *ngFor="let van of filteredVans">
         <div class="van-card">
             <a routerLink="/camperview/{{van.id}}">
@@ -12,4 +12,22 @@
             <button (click)="addFav(van.id)">Add Fav</button>
         </div>
     </div>
-</div>
+</div> -->
+ 
+<section>
+
+  <div class="card" *ngFor="let van of filteredVans">
+    <a routerLink="/camperview/{{van.id}}">
+      <img src="{{van.img}}" alt="{{van.title}}" > </a>
+      
+      <div class="card__content">
+        <p class="card__title">{{van.title}}</p>
+        <h3 class="card__description">Price:{{van.price}}€</h3>
+        <p>Fuel:{{van.fuel}}</p>
+        <p>Year:{{van.year}}</p>
+        <p>Km:{{van.km}}</p>
+
+      </div> 
+    
+  </div>
+  </section>
