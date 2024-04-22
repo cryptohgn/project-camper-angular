@@ -85,8 +85,6 @@ constructor() {
   });
 }
 
-
-
 applyFilter = () => {
   
   let filterVans = this.allVans.filter(item =>  {

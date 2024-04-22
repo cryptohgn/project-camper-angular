@@ -33,4 +33,9 @@ export class ServiceVans {
     
   }
 
+  sendFavs(favs: Camper[]){
+    
+    console.log(favs)
+  }
+
 }

@@ -1,7 +1,9 @@
+import { ServiceVans } from 'src/app/services/serviceVans.service';
 import { Component, Inject, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { ServiceUsers } from 'src/app/services/serviceUsers.services';
+import { Camper } from 'src/app/interfaces/campers.interface';
 
 @Component({
   selector: 'app-user',
@@ -9,6 +11,25 @@ import { ServiceUsers } from 'src/app/services/serviceUsers.services';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent {
+
+
+private serviceUsers = inject(ServiceUsers)
+servideVans = inject(ServiceVans)
+allVans: Camper[]=[];
+
+userVansAdds: Camper[]=[];
+
+userFromLocalStorage!: any;
+
+clave!: User;
+router = inject(Router)
+
+  loadCurrentUser(): void {
+    this.userFromLocalStorage = this.serviceUsers.getCurrentUserFromLocalStorage();
+    console.log(this.userFromLocalStorage);
+    
+    if (this.userFromLocalStorage) {
+      this.clave = this.userFromLocalStorage;
   private serviceUsers = inject(ServiceUsers);
   clave!: User;
   router = inject(Router);
@@ -20,6 +41,7 @@ export class UserComponent {
 
     if (userFromLocalStorage) {
       this.clave = userFromLocalStorage;
+ cssFilter
     } else {
       this.router.navigate(['/login']);
     }
@@ -38,7 +60,13 @@ export class UserComponent {
         },
       });
     }
+
+
+   
+  };
+
   }
+
 
   editUser(): void {
     this.router.navigate(['/']);
@@ -46,5 +74,22 @@ export class UserComponent {
 
   ngOnInit(): void {
     this.loadCurrentUser();
+    this.userVans();
+  }
+
+  async getVans() {
+    const response = await this.servideVans.getAllVans();
+    this.allVans = response;
+    }
+    
+    userVans() {
+      this.userVansAdds = this.allVans.filter((van)=>{
+      van.user === this.clave.username;
+      console.log(this.userVansAdds) 
+      console.log(this.allVans)
+    })
+    }
+  }
   }
 }
+
