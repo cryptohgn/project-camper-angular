@@ -8,9 +8,10 @@ import { Camper } from 'src/app/interfaces/campers.interface';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent {
+
 
 private serviceUsers = inject(ServiceUsers)
 servideVans = inject(ServiceVans)
@@ -29,11 +30,23 @@ router = inject(Router)
     
     if (this.userFromLocalStorage) {
       this.clave = this.userFromLocalStorage;
+  private serviceUsers = inject(ServiceUsers);
+  clave!: User;
+  router = inject(Router);
+
+  loadCurrentUser(): void {
+    const userFromLocalStorage =
+      this.serviceUsers.getCurrentUserFromLocalStorage();
+    console.log(userFromLocalStorage);
+
+    if (userFromLocalStorage) {
+      this.clave = userFromLocalStorage;
+ cssFilter
     } else {
       this.router.navigate(['/login']);
     }
   }
-  
+
   deleteUser(): void {
     if (this.clave && this.clave.id) {
       const userId = this.clave.id;
@@ -44,17 +57,20 @@ router = inject(Router)
         },
         error: (error: User) => {
           console.error('Error al eliminar usuario:', error);
-        }
+        },
       });
     }
+
 
    
   };
 
+  }
+
+
   editUser(): void {
     this.router.navigate(['/']);
-  };
-
+  }
 
   ngOnInit(): void {
     this.loadCurrentUser();
@@ -74,4 +90,6 @@ router = inject(Router)
     })
     }
   }
-    
+  }
+}
+

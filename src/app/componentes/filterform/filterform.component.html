@@ -1,187 +1,290 @@
-<div class="form-search">
-    <input name="buscar"[(ngModel)]="formSearch" placeholder="Search for you Camper Van">
+<div class="filtContainer">
+  <div class="form-search">
+    <input
+      name="buscar"
+      [(ngModel)]="formSearch"
+      placeholder="Search for you Camper Van"
+    />
     <button (click)="searchVan()">Search</button>
-</div>
+  </div>
 
-<div class="filterForm">
+  <div class="filterForm">
     <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
-                <div>
-                    <label for="brand">Choose a Brand:</label>
-                        <select name="brand" id="brand" formControlName="brand">
-                            <option value="">--Please choose an option--</option>
-                            <option value="Volkswagen">Volkswagen</option>
-                            <option value="Mercedes-Benz">Mercedes-Benz</option>
-                            <option value="Ford">Ford</option>
-                            <option value="Fiat">Fiat</option>
-                            <option value="Renault">Renault</option>
-                            <option value="Nissan">Nissan</option>
-                            <option value="Opel">Opel</option>
-                            <option value="Iveco">Iveco</option>
-                            <option value="Hyundai">Hyundai</option>
-                            <option value="Vauxhall">Vauxhall</option>
-                            <option value="Peugeot">Peugeot</option>
-                            <option value="Honda">Honda</option>
-                            <option value="Bürstner">Bürstner</option>
-                            <option value="Laika">Laika</option>
-                            <option value="FurgoKaravaning">FurgoKaravaning</option>
-                            <option value="Dreamer">Dreamer</option>
-                            <option value="Other">Other</option>
-                        </select>
-                        <div *ngIf="filterForm.get('brand')?.value === 'Other'">
-                            <input type="text" formControlName="otherbrand" placeholder="Specify Brand">
-                        </div>
-                        <label for="model">Choose Model:</label>
-                            <select name="model" id="model" formControlName="model">
-                                <option value="">--Please choose an option--</option>
-                                <option value="Westfalia">Westfalia</option>
-                                <option value="California">California</option>
-                                <option value="Sprinter">Sprinter</option>
-                                <option value="Nugget">Nugget</option>
-                                <option value="Vito">Vito</option>
-                                <option value="Transit">Transit</option>
-                                <option value="Marco Polo">Marco Polo</option>
-                                <option value="Daily">Daily</option>
-                                <option value="Berlingo">Berlingo</option>
-                                <option value="Caddy">Caddy</option>
-                                <option value="h1">Ducato</option>
-                                <option value="4*4">4*4</option>
-                                <option value="Master">Master</option>
-                                <option value="T3">T3</option>
-                                <option value="T4">T4</option>
-                                <option value="T5">T5</option>
-                                <option value="Multivan">Multivan</option>
-                                <option value="NV200">NV200</option>
-                                <option value="NV200">NV300</option>
-                                <option value="Jumper">Jumper</option>
-                                <option value="Boxer">Boxer</option>
-                                <option value="Vivaro">Vivaro</option>
-                                <option value="Ducato">Vivaro</option>
-                                <option value="otherModel">Other</option>
-                            </select>
-                            <div *ngIf="filterForm.get('model')?.value === 'Other'">
-                                <input type="text" formControlName="othermodel" placeholder="Specify Model">
-                            </div>
-                          </div>
-                <div>
-                    <label for="price">Price: </label>
-                        <span>Min Price:</span><input type="range" id="price" formControlName="priceMin" min="0" max="20000" step="1000">
-                        <span>{{ filterForm.get('priceMin')?.value }}</span>
-                        <span>Max Price:</span><input type="range" id="price" formControlName="priceMax" min="0" max="100000" step="1000">
-                        <span>{{ filterForm.get('priceMax')?.value }}</span>
-                </div>
-                <div>
-                    <label for="km">Km:</label>
-                        <input type="range" id="km" formControlName="kmMin" min="0" max="50000" step="10000">
-                        <span>{{ filterForm.get('kmMin')?.value }}</span>
-                        <input type="range" id="km" formControlName="kmMax" min="30000" max="1000000" step="50000">
-                        <span>{{ filterForm.get('kmMax')?.value }}</span>
-                </div>
-                <div>
-                    <label for="years">Years:</label>
-                        <input type="range" id="year" formControlName="yearMin" min="1970" max={{currentYear}} step="1">
-                        <span>{{ filterForm.get('yearMin')?.value }}</span>
-                        <input type="range" id="year" formControlName="yearMax" min="1980" max={{currentYear}} step="1">
-                        <span>{{ filterForm.get('yearMax')?.value }}</span>
-                </div>
-                <div>
-                    <label for="kw">Kw:</label>
-                        <input type="range" id="kw" formControlName="kwMin" min="20" max="300" step="20">
-                        <span>{{ filterForm.get('kwMin')?.value }}</span>
-                        <input type="range" id="kw" formControlName="kwMax" min="60" max="800" step="20">
-                        <span>{{ filterForm.get('kwMax')?.value }}</span>
-                </div>
-                <div>
-                    Fuel: <label class="form-icon-checkbox">
-                        <input type="checkbox" id="diesel" formControlName="diesel">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                    </label> Diesel
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="gasoline" formControlName="gasoline">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                    </label> Gasoline
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="gas" formControlName="gas">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                    </label> Gas(Gnc)
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="electric" formControlName="electric">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                    </label> Electric
-                </div>
-                <div>
-                    <label for="doors">Doors:</label>
-                        <input type="range" id="doors" formControlName="doors" min="0" max="8" step="1">
-                        <span>{{ filterForm.get("doors")?.value }}</span>
-                </div>
-                
-                <div>
-                    Isolation: <label for="isolation">
-                        <input type="checkbox" id="isolation" formControlName="isolation">
-                    </label>
-                    <div *ngIf="filterForm.get('isolation')?.value">
-                     <label>
-                        <input type="checkbox" id="thinsulate" formControlName="thinsulate">
-                        Thinsulate
-                    </label> 
-                    <label>
-                        <input type="checkbox" id="reflectix" formControlName="reflectix">
-                        Reflectix
-                    </label>
-                    <label>
-                        <!-- Ajustado el nombre del control -->
-                        <input type="checkbox" id="foamBoard" formControlName="foamBoard">
-                        Foam Board
-                    </label>
-                    <label>
-                        <input type="checkbox" id="kayflex" formControlName="kayflex">
-                        KayFlex
-                    </label>
-                    <label>
-                        <input type="checkbox" id="other_isolation" formControlName="other_isolation">
-                        Other
-                    </label>
-                    </div>
-                </div>
-                <div>Special features:
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="solarpanel" formControlName="solarpanel">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                        Solarpanel
-                    </label>
+      <div>
+        <div>
+          <label for="brand">Choose a Brand:</label>
+          <select name="brand" id="brand" formControlName="brand">
+            <option value="">--Please choose an option--</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Ford">Ford</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Renault">Renault</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Opel">Opel</option>
+            <option value="Iveco">Iveco</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Vauxhall">Vauxhall</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Honda">Honda</option>
+            <option value="Bürstner">Bürstner</option>
+            <option value="Laika">Laika</option>
+            <option value="FurgoKaravaning">FurgoKaravaning</option>
+            <option value="Dreamer">Dreamer</option>
+            <option value="Other">Other</option>
+          </select>
+          <div *ngIf="filterForm.get('brand')?.value === 'Other'">
+            <input
+              type="text"
+              formControlName="otherbrand"
+              placeholder="Specify Brand"
+            />
+          </div>
+        </div>
+        <label for="model">Choose Model:</label>
+        <select name="model" id="model" formControlName="model">
+          <option value="">--Please choose an option--</option>
+          <option value="Westfalia">Westfalia</option>
+          <option value="California">California</option>
+          <option value="Sprinter">Sprinter</option>
+          <option value="Nugget">Nugget</option>
+          <option value="Vito">Vito</option>
+          <option value="Transit">Transit</option>
+          <option value="Marco Polo">Marco Polo</option>
+          <option value="Daily">Daily</option>
+          <option value="Berlingo">Berlingo</option>
+          <option value="Caddy">Caddy</option>
+          <option value="h1">Ducato</option>
+          <option value="4*4">4*4</option>
+          <option value="Master">Master</option>
+          <option value="T3">T3</option>
+          <option value="T4">T4</option>
+          <option value="T5">T5</option>
+          <option value="Multivan">Multivan</option>
+          <option value="NV200">NV200</option>
+          <option value="NV200">NV300</option>
+          <option value="Jumper">Jumper</option>
+          <option value="Boxer">Boxer</option>
+          <option value="Vivaro">Vivaro</option>
+          <option value="Ducato">Vivaro</option>
+          <option value="otherModel">Other</option>
+        </select>
+        <div *ngIf="filterForm.get('model')?.value === 'Other'">
+          <input
+            type="text"
+            formControlName="othermodel"
+            placeholder="Specify Model"
+          />
+        </div>
+      </div>
+      <div>
+        <p><label for="price">Price: </label></p>
+        <span>Min Price:</span
+        ><input
+          type="range"
+          id="price"
+          formControlName="priceMin"
+          min="0"
+          max="20000"
+          step="1000"
+        />
+        <span class="filtNum">{{ filterForm.get("priceMin")?.value }}</span>
+        <p>
+          Max Price:
+          <input
+            type="range"
+            id="price"
+            formControlName="priceMax"
+            min="0"
+            max="100000"
+            step="1000"
+          />
 
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="liftedRoof" formControlName="liftedRoof">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                        liftedRoof
-                    </label>
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="backCam" formControlName="backCam">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                        Back Cam
-                    </label>
-                    <label class="form-icon-checkbox">
-                        <input type="checkbox" id="androidIOAuto" formControlName="androidIOAuto">
-                        <img src="../../../assets/img/icons/diesel-icon.svg">
-                        IO / Android Auto
-                    </label>
-                </div>
-                <div>
-                    <div>
-                        Change:
-                        <label class="form-icon-checkbox">
-                            <input type="checkbox" id="manual" formControlName="manual">
-                            <img src="../../../assets/img/icons/diesel-icon.svg">
-                            Manual
-                        </label>
-        
-                        <!-- C.S. Ajustado el nombre del control (se repetía manual) -->
-                        <label class="form-icon-checkbox">
-                            <input type="checkbox" id="automatic" formControlName="automatic">
-                            <img src="../../../assets/img/icons/diesel-icon.svg">
-                            Automatic
-                        </label>
-                    </div>
-                </div>
-                <button type="submit">Apply Filter</button>
+          <span class="filtNum">{{ filterForm.get("priceMax")?.value }}</span>
+        </p>
+      </div>
+      <div>
+        <p><label for="km">Km:</label></p>
+        <input
+          type="range"
+          id="km"
+          formControlName="kmMin"
+          min="0"
+          max="50000"
+          step="10000"
+        />
+        <span class="filtNum">{{ filterForm.get("kmMin")?.value }}</span>
+        <input
+          type="range"
+          id="km"
+          formControlName="kmMax"
+          min="30000"
+          max="1000000"
+          step="50000"
+        />
+        <span class="filtNum">{{ filterForm.get("kmMax")?.value }}</span>
+      </div>
+      <div>
+        <p><label for="years">Years:</label></p>
+        <input
+          type="range"
+          id="year"
+          formControlName="yearMin"
+          min="1970"
+          max="{{ currentYear }}"
+          step="1"
+        />
+        <span class="filtNum">{{ filterForm.get("yearMin")?.value }}</span>
+        <input
+          type="range"
+          id="year"
+          formControlName="yearMax"
+          min="1980"
+          max="{{ currentYear }}"
+          step="1"
+        />
+        <span class="filtNum">{{ filterForm.get("yearMax")?.value }}</span>
+      </div>
+      <div>
+        <p><label for="kw">Kw:</label></p>
+        <input
+          type="range"
+          id="kw"
+          formControlName="kwMin"
+          min="20"
+          max="300"
+          step="20"
+        />
+        <span class="filtNum">{{ filterForm.get("kwMin")?.value }}</span>
+        <input
+          type="range"
+          id="kw"
+          formControlName="kwMax"
+          min="60"
+          max="800"
+          step="20"
+        />
+        <span class="filtNum">{{ filterForm.get("kwMax")?.value }}</span>
+      </div>
+      <div>
+        <p>Fuel:</p>
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="diesel" formControlName="diesel" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+        </label>
+        Diesel
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="gasoline" formControlName="gasoline" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+        </label>
+        Gasoline
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="gas" formControlName="gas" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+        </label>
+        Gas(Gnc)
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="electric" formControlName="electric" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+        </label>
+        Electric
+      </div>
+      <div>
+        <label for="doors">Doors:</label>
+        <input
+          type="range"
+          id="doors"
+          formControlName="doors"
+          min="0"
+          max="8"
+          step="1"
+        />
+        <span class="filtNum">{{ filterForm.get("doors")?.value }}</span>
+      </div>
+
+      <div>
+        Isolation:
+        <label for="isolation">
+          <input type="checkbox" id="isolation" formControlName="isolation" />
+        </label>
+        <div *ngIf="filterForm.get('isolation')?.value">
+          <label>
+            <input
+              type="checkbox"
+              id="thinsulate"
+              formControlName="thinsulate"
+            />
+            Thinsulate
+          </label>
+          <label>
+            <input type="checkbox" id="reflectix" formControlName="reflectix" />
+            Reflectix
+          </label>
+          <label>
+            <!-- Ajustado el nombre del control -->
+            <input type="checkbox" id="foamBoard" formControlName="foamBoard" />
+            Foam Board
+          </label>
+          <label>
+            <input type="checkbox" id="kayflex" formControlName="kayflex" />
+            KayFlex
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="other_isolation"
+              formControlName="other_isolation"
+            />
+            Other
+          </label>
+        </div>
+      </div>
+      <div>
+        Special features:
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="solarpanel" formControlName="solarpanel" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+          Solarpanel
+        </label>
+
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="liftedRoof" formControlName="liftedRoof" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+          liftedRoof
+        </label>
+        <label class="form-icon-checkbox">
+          <input type="checkbox" id="backCam" formControlName="backCam" />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+          Back Cam
+        </label>
+        <label class="form-icon-checkbox">
+          <input
+            type="checkbox"
+            id="androidIOAuto"
+            formControlName="androidIOAuto"
+          />
+          <img src="../../../assets/img/icons/diesel-icon.svg" />
+          IO / Android Auto
+        </label>
+      </div>
+      <div>
+        <div>
+          Change:
+          <label class="form-icon-checkbox">
+            <input type="checkbox" id="manual" formControlName="manual" />
+            <img src="../../../assets/img/icons/diesel-icon.svg" />
+            Manual
+          </label>
+
+          <!-- C.S. Ajustado el nombre del control (se repetía manual) -->
+          <label class="form-icon-checkbox">
+            <input type="checkbox" id="automatic" formControlName="automatic" />
+            <img src="../../../assets/img/icons/diesel-icon.svg" />
+            Automatic
+          </label>
+        </div>
+      </div>
+      <button type="submit">Apply Filter</button>
     </form>
-        <app-camper-van-list [filteredVans]="filteredVans"></app-camper-van-list>
+  </div>
+</div>

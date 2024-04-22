@@ -1,7 +1,13 @@
-<router-outlet></router-outlet>
 <app-header></app-header>
 <app-filterform></app-filterform>
 <app-add-campervan></app-add-campervan>
-
-
-
+<div class="container">
+  <div class="filtContainer">
+    <app-filterform></app-filterform>
+  </div>
+  <div class="main">
+    <router-outlet></router-outlet>
+    <app-camper-van-list></app-camper-van-list>
+  </div>
+</div>
+<app-footer></app-footer>
