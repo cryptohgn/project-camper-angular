@@ -1,0 +1,23 @@
+.buttonFilter{
+    background-color: #000;
+    width:80%;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 0;
+    }
+
+    input {
+        height: 2em;
+        border-radius: 10px;
+        padding:10px;
+        font-size: 600;
+        margin: 10px 0;
+        outline: none;
+        border: solid 1px white;
+    }
