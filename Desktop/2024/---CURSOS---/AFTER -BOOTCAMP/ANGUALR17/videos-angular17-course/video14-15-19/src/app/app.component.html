@@ -1,0 +1,43 @@
+<!-- Two way binding -->
+<input type="text" [(ngModel)]="staticInput"/>
+<input type="text" [(ngModel)]="dynamicInput" />
+{{dynamicInput}}
+
+<!--Asigment Two way binding-->
+<input type="text" [(ngModel)]="inputval">
+<br/><br/>
+<button type="submit" (click)="show()">Show</button>
+{{dynamicVal}}
+
+<!--Asigment creating a counter example-->
+<div class="container">
+    <h1>Counter example</h1>
+    <div class="btn-container">
+        <button>--</button>
+
+    <p></p>
+    <button>++</button>
+</div>
+
+<!--Events-->
+
+<!-- Click
+<button (click)="display('Welcome')">Click</button>
+Double Click
+<h1 (dblclick)="incr()">Increment - {{counter}}</h1>
+Mouse Over
+<h1 (mouseover)="incr()">Increment - {{counter}}</h1>
+Mouse Leave
+Drag
+<h1 (drag)="incr()">Increment - {{counter}}</h1>
+Drag
+<h1 (dragover)="incr()">Increment - {{counter}}</h1>
+Keyboard events
+<input type="text" (keypress)="onKeyPress()">
+<input type="text" (keydown.enter)="onKeyDown()">
+<input type="text" (keyup)="onKeyUP()">
+<input type="text" (focus)="onFocus()">
+<input type="text" (select)="onSelect()">
+<input type="text" (blur)="onBlur()"> -->
+
+
